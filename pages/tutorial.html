@@ -14,7 +14,7 @@
     <a href="../index.html">BizUI</a>
     <a href="#" class="active">起步</a>
     <a href="components.html">组件</a>
-    <a class="github" href="https://github.com/bizdevfe/biz-ui/releases" target="_blank">GitHub&nbsp;&nbsp;v1.4.4</a>
+    <a class="github" href="https://github.com/bizdevfe/biz-ui/releases" target="_blank">GitHub&nbsp;&nbsp;v1.4.6</a>
 </nav>
 
 <div class="container">
@@ -35,6 +35,18 @@
         vendor: ['jquery', 'biz-ui']
     }
         </code></pre>
+        <p>BizUI 引用了 Iconfont，需要配置字体 loader：</p>
+        <pre><code class="js">
+    module: {
+        loaders: [
+            // stuff
+            {
+                test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=]+)?$/,
+                loader: 'file-loader'
+            }
+        ]
+    }
+        </code></pre>
         <p>如果你没有使用构建系统，那么直接在页面中引入 jQuery、BizUI 的 CSS 和 JS 文件：
 		<pre><code class="html">
     &lt;link rel="stylesheet" type="text/css" href="jquery.bizui.css"&gt;
@@ -46,7 +58,8 @@
     $('button').bizButton();
     $('input').bizCalendar();
         </code></pre>
-        <p>每个组件的具体使用方法请参见 <a href="components.html">示例代码</a>。</p>
+        <p>每个组件的具体使用方法请参见：<a href="components.html">示例代码</a></p>
+        <p>结合Bakcbone、Webpack使用： <a href="https://github.com/rickyleung/backbone-webpack" target="_blank">A backbone-webpack example</a></p>
         <h3>主题</h3>
         <img src="asset/img/theme.png"/>
         <p>BizUI 提供了 19 种不同的主题风格，可通过组件的 theme 参数设置：</p>
@@ -109,16 +122,6 @@
             <li><a href="components.html">示例代码</a></li>
             <li><a href="mailto:bizdev_fe@sogou-inc.com">技术支持</a></li>
             <li><a href="https://github.com/bizdevfe/biz-ui/issues" target="_blank">使用反馈</a></li>
-        </ul>
-    </div>
-    <div class="mol">
-        <h3>BizFE 产品</h3>
-        <ul>
-            <li><a href="http://fe.sogou/" target="_blank">主页</a></li>
-            <li><a href="http://fe.sogou-inc.com/" target="_blank">博客</a></li>
-            <li><a href="http://bizdp.fe.sogou/" target="_blank">BizDP</a></li>
-            <li><a href="http://bizui2.fe.sogou/" target="_blank">BizUI<sup>2</sup></a></li>
-            <li><a href="http://bizmobile.sogou/h5frame.html#/start/" target="_blank">BizMobileUI</a></li>
         </ul>
     </div>
 </footer>
